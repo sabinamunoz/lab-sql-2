@@ -24,6 +24,6 @@ select * from film where length > 180;
 -- 10.Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
 select concat(first_name,'.',last_name, '@sakilacustomer.org') as customer_mail from customer;
 -- 11. What's the length of the longest film title?
-select max(length) from film;
-select * from film where (length = 185);
-
+select length(title) as lenght_title from film
+order by lenght_title desc
+limit 1;
